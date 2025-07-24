@@ -1,7 +1,7 @@
 <!-- src/app/components/task-form/task-form.component.html -->
 <div class="create-task-section">
   <h2>Add New Task</h2>
-  <form (ngSubmit)="onSubmit()" #taskForm="ngForm" class="task-form">
+  <!-- <form (ngSubmit)="onSubmit()" #taskForm="ngForm" class="task-form">
     <div class="form-group">
       <label for="title">Title *</label>
       <input 
@@ -31,5 +31,12 @@
       class="btn btn-primary">
       Add Task
     </button>
-  </form>
+  </form> -->
+  <form (ngSubmit)="onSubmit()">
+  <label>Title: <input [(ngModel)]="task.title" name="title" required /></label><br />
+  <label>Description: <input [(ngModel)]="task.description" name="description" /></label><br />
+  <label>Due Date: <input type="date" [(ngModel)]="task.dueDate" name="dueDate" /></label><br />
+  <button type="submit">Create Task</button>
+</form>
+
 </div>
