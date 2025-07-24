@@ -1,35 +1,39 @@
-/* src/app/components/task-list/task-list.component.css */
-.tasks-section h2 {
-  color: #495057;
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-}
-
-.no-tasks {
-  text-align: center;
-  color: #6c757d;
-  font-style: italic;
-  padding: 40px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  border: 2px dashed #dee2e6;
-}
-
-.loading {
-  text-align: center;
-  color: #6c757d;
-  font-style: italic;
+.task-list-container {
   padding: 20px;
+  max-width: 600px;
+  margin: auto;
 }
 
-.tasks-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f8f8;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-  .tasks-grid {
-    grid-template-columns: 1fr;
-  }
+.task-details h3 {
+  margin: 0 0 5px;
+}
+
+.task-details p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #444;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+button:hover {
+  background-color: #45a049;
 }

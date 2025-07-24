@@ -35,6 +35,22 @@
   font-weight: 500;
 }
 
+/* container control */
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+app-task-form,
+app-task-list {
+  flex: 1;
+  max-width: 45%;
+}
+
+
 @media (max-width: 768px) {
   .container {
     padding: 15px;
