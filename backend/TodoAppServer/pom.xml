@@ -65,18 +65,18 @@
 			<artifactId>jakarta.validation-api</artifactId>
 			<version>3.0.2</version> <!-- or latest version -->
 		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
 
 		<!-- Also include an implementation (Hibernate Validator is the reference implementation) -->
 		<dependency>
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>8.0.1.Final</version> <!-- or latest version -->
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
