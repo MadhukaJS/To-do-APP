@@ -4,49 +4,49 @@ How to Run the Project
 
 Make sure you have the following installed:
 
-Java 17+
-Node.js & npm
-MySQL (or compatible SQL database)
-(Optional) Angular CLI for development (npm install -g @angular/cli)
-----------------------------------
-Step 1: Set Up the Database
-Open MySQL or your preferred SQL tool.
-Create a new database named tododb.
+Java 17+ ,
+Node.js & npm ,
+MySQL (or compatible SQL database) ,
+(Optional) Angular CLI for development (npm install -g @angular/cli) ,
+---------------------------------- 
+Step 1: Set Up the Database 
+Open MySQL or your preferred SQL tool. 
+Create a new database named tododb. 
 
-Import the SQL schema file provided in one of the following locations:
+Import the SQL schema file provided in one of the following locations: 
 
-todoappserver/src/main/resources/todo-app.sql
-or
-database/tododb.sql 
+todoappserver/src/main/resources/todo-app.sql 
+or 
+database/tododb.sql  
 
-This file contains the required table structure and sample data (if any).
+This file contains the required table structure and sample data (if any). 
 
 ---------------------------------------------------------------------------------------
-step 2: Configure the Backend
-Navigate to the backend directory.
+step 2: Configure the Backend 
+Navigate to the backend directory. 
 
-Open src/main/resources/application.properties.
+Open src/main/resources/application.properties. 
 
-Update the database connection properties:
+Update the database connection properties: 
 
-spring.datasource.url=jdbc:mysql://localhost:3306/tododb
-spring.datasource.username=root
-spring.datasource.password=9090
+spring.datasource.url=jdbc:mysql://localhost:3306/tododb, 
+spring.datasource.username=root, 
+spring.datasource.password=9090, 
 
-Start the Spring Boot application.
+Start the Spring Boot application. 
 ----------------------------------------------------------------------------------------
 
-Step 3: Run the Frontend
-Open a new terminal and navigate to the frontend directory.
+Step 3: Run the Frontend 
+Open a new terminal and navigate to the frontend directory. 
 
 Install dependencies:
-npm install
+npm install,
 
-Start the Angular development server:
+Start the Angular development server: 
 
-ng serve
-Open your browser and visit:
-http://localhost:4200
+ng serve 
+Open your browser and visit: 
+http://localhost:4200 
 -----------------------------------------------------------------------------------------
 
 
