@@ -1,21 +1,41 @@
-<div class="create-task-section">
-  <h2>Add New Task</h2>
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="title">Title:</label>
-      <input id="title" [(ngModel)]="task.title" name="title" required type="text" />
+<div class="page-container">
+  <div class="task-wrapper">
+    <!-- Left: Task Form -->
+    <div class="glass-card">
+      <h2 class="section-title">Add New Task</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input id="title" [(ngModel)]="task.title" name="title" required type="text" placeholder="Enter task title" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" [(ngModel)]="task.description" name="description" rows="3"
+            placeholder="Enter task description"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Create Task</button>
+      </form>
     </div>
 
-    <div class="form-group">
-      <label for="description">Description:</label>
-      <input id="description" [(ngModel)]="task.description" name="description" type="text" />
+    <!-- Right: Task List -->
+    <div class="glass-card">
+      <h2 class="section-title">Recent Tasks</h2>
+
+      <ul *ngIf="recentTasks.length > 0; else noTasks">
+        <li *ngFor="let task of recentTasks" class="task-item">
+          <div class="task-details">
+            <h3>{{ task.title }}</h3>
+            <p>{{ task.description }}</p>
+          </div>
+          <button (click)="markAsDone(task.id)" class="done-btn">✔ Done</button>
+        </li>
+      </ul>
+
+      <ng-template #noTasks>
+        <p class="no-tasks">No recent tasks found.</p>
+      </ng-template>
     </div>
-
-    <!-- <div class="form-group">
-      <label for="dueDate">Due Date:</label>
-      <input id="dueDate" type="date" [(ngModel)]="task.dueDate" name="dueDate" />
-    </div> -->
-
-    <button type="submit">Create Task</button>
-  </form>
+  </div>
 </div>

@@ -50,6 +50,27 @@ app-task-list {
   max-width: 45%;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Optional: limit widths */
+app-task-form {
+  flex: 1;
+  max-width: 40%;
+}
+
+app-task-list {
+  flex: 2;
+  max-width: 60%;
+}
+
+
 
 @media (max-width: 768px) {
   .container {

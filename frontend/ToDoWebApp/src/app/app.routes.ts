@@ -18,7 +18,7 @@ import { provideHttpClient } from '@angular/common/http';
 
 export const routes: Routes = [
   {
-    path: 'app-task-form',
+    path: '',
     component: TaskFormComponent,
   },
   {
@@ -32,7 +32,7 @@ export const routes: Routes = [
   // Provide HttpClient for all routes
   { 
     path: '',
-    providers: [provideHttpClient()], // <-- Add this
+    providers: [provideHttpClient()], 
     children: [
       // Your existing routes
       { path: 'app-task-form', component: TaskFormComponent },
