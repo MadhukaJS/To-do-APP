@@ -28,7 +28,6 @@ Navigate to the backend directory.
 Open src/main/resources/application.properties. 
 
 Update the database connection properties: 
-
 spring.datasource.url=jdbc:mysql://localhost:3306/tododb, 
 spring.datasource.username=root, 
 spring.datasource.password=9090, 
