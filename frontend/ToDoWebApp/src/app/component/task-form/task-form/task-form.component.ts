@@ -26,6 +26,7 @@ export class TaskFormComponent {
     this.TaskServiceService.createTask(this.task).subscribe({
       next: (response) => {
         console.log('Task created:', response);
+        alert('task created!');
         this.reloadPage();
       },
       error: (err) => {
