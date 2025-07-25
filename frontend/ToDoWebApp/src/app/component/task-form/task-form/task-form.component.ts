@@ -26,13 +26,17 @@ export class TaskFormComponent {
     this.TaskServiceService.createTask(this.task).subscribe({
       next: (response) => {
         console.log('Task created:', response);
-        // Optionally reset the form or navigate
+        this.reloadPage();
       },
       error: (err) => {
         console.error('Error creating task:', err);
       }
     });
   }
+  reloadPage(): void {
+    window.location.reload();
+  }
+
 
   //----------------------task list----------------------------
 
