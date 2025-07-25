@@ -32,8 +32,7 @@ Update the database connection properties:
 spring.datasource.url=jdbc:mysql://localhost:3306/tododb, 
 spring.datasource.username=root, 
 spring.datasource.password=9090, 
-
-Start the Spring Boot application. 
+start the springboot application.
 ----------------------------------------------------------------------------------------
 
 Step 3: Run the Frontend 
