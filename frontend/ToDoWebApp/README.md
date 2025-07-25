@@ -49,22 +49,19 @@ Open your browser and visit:
 http://localhost:4200 
 -----------------------------------------------------------------------------------------
 
+run unit tests in springboot,
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Using an IDE (e.g., IntelliJ IDEA, Eclipse)
+Open the project in your IDE.
 
-## Development server
+Navigate to src/test/java.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Right-click the test class or method you want to run.
 
-## Code scaffolding
+Click Run to execute tests individually or as a suite.
+--------------------------------------------------------------------------------------------
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
+## Running unit tests in angular
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
