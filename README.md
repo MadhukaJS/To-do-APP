@@ -1,4 +1,4 @@
-ToDoWebApp – Setup Guide
+**ToDoWebApp – Setup Guide**
 Before running the project, ensure you have Java 17 or higher, Node.js & npm, and MySQL (or a compatible SQL database) installed on your system. Installing the Angular CLI globally is optional but recommended, which can be done by running npm install -g @angular/cli.
 
 To set up the database, open MySQL or your preferred SQL client and create a new database named tododb by running CREATE DATABASE tododb;. Then, import the SQL schema from either todoappserver/src/main/resources/todo-app.sql or database/tododb.sql, which contains the required tables and sample data if provided.
