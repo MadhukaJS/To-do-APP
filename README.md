@@ -1,74 +1,11 @@
-# ToDoWebApp
+**ToDoWebApp – Setup Guide**
 
-How to Run the Project
+Before running the project, ensure you have Java 17 or higher, Node.js & npm, and MySQL (or a compatible SQL database) installed on your system. Installing the Angular CLI globally is optional but recommended, which can be done by running npm install -g @angular/cli.
 
-Make sure you have the following installed:
+To set up the database, open MySQL or your preferred SQL client and create a new database named tododb by running CREATE DATABASE tododb;. Then, import the SQL schema from either todoappserver/src/main/resources/todo-app.sql or database/tododb.sql, which contains the required tables and sample data if provided.
 
-Java 17+ ,
-Node.js & npm ,
-MySQL (or compatible SQL database) ,
-(Optional) Angular CLI for development (npm install -g @angular/cli) ,
----------------------------------- 
-Step 1: Set Up the Database 
-Open MySQL or your preferred SQL tool. 
-Create a new database named tododb. 
+For the backend configuration, navigate to the backend folder and open the src/main/resources/application.properties file. Update the database connection properties with spring.datasource.url=jdbc:mysql://localhost:3306/tododb, spring.datasource.username=root, and spring.datasource.password=9090. You can start the Spring Boot application by running the main class from your IDE or executing mvn spring-boot:run in the terminal.
 
-Import the SQL schema file provided in one of the following locations: 
+To run the frontend, open a new terminal window, navigate to the frontend folder, and install dependencies using npm install. Start the Angular development server with ng serve, and then open your browser to http://localhost:4200 to access the application.
 
-todoappserver/src/main/resources/todo-app.sql 
-or 
-database/tododb.sql  
-
-This file contains the required table structure and sample data (if any). 
-
----------------------------------------------------------------------------------------
-step 2: Configure the Backend 
-Navigate to the backend directory. 
-
-Open src/main/resources/application.properties. 
-
-Update the database connection properties: 
-
-spring.datasource.url=jdbc:mysql://localhost:3306/tododb, 
-spring.datasource.username=root, 
-spring.datasource.password=9090, 
-
-Start the Spring Boot application. 
-----------------------------------------------------------------------------------------
-
-Step 3: Run the Frontend 
-Open a new terminal and navigate to the frontend directory. 
-
-Install dependencies:
-npm install,
-
-Start the Angular development server: 
-
-ng serve 
-Open your browser and visit: 
-http://localhost:4200 
------------------------------------------------------------------------------------------
-
-run unit tests in springboot,
-
-Using an IDE (e.g., IntelliJ IDEA, Eclipse)
-Open the project in your IDE.
-
-Navigate to src/test/java.
-
-Right-click the test class or method you want to run.
-
-Click Run to execute tests individually or as a suite.
--------------------------------------------------------------------------------------------
-
-## Running unit tests in angular
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For running unit tests, if you are testing the backend (Spring Boot), open the project in your IDE, navigate to src/test/java, right-click the desired test class or method, and select Run.
