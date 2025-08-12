@@ -9,3 +9,5 @@ For the backend configuration, navigate to the backend folder and open the src/m
 To run the frontend, open a new terminal window, navigate to the frontend folder, and install dependencies using npm install. Start the Angular development server with ng serve, and then open your browser to http://localhost:4200 to access the application.
 
 For running unit tests, if you are testing the backend (Spring Boot), open the project in your IDE, navigate to src/test/java, right-click the desired test class or method, and select Run.
+
+<img alt="cc" width="1200px" src="./Untitled design (1).jpg" />
