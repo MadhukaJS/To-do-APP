@@ -1,58 +1,10 @@
 ToDoWebApp – Setup Guide
-Prerequisites
-Java 17 or higher
+Before running the project, ensure you have Java 17 or higher, Node.js & npm, and MySQL (or a compatible SQL database) installed on your system. Installing the Angular CLI globally is optional but recommended, which can be done by running npm install -g @angular/cli.
 
-Node.js & npm
+To set up the database, open MySQL or your preferred SQL client and create a new database named tododb by running CREATE DATABASE tododb;. Then, import the SQL schema from either todoappserver/src/main/resources/todo-app.sql or database/tododb.sql, which contains the required tables and sample data if provided.
 
-MySQL (or compatible SQL database)
+For the backend configuration, navigate to the backend folder and open the src/main/resources/application.properties file. Update the database connection properties with spring.datasource.url=jdbc:mysql://localhost:3306/tododb, spring.datasource.username=root, and spring.datasource.password=9090. You can start the Spring Boot application by running the main class from your IDE or executing mvn spring-boot:run in the terminal.
 
-(Optional) Angular CLI — install with: npm install -g @angular/cli
+To run the frontend, open a new terminal window, navigate to the frontend folder, and install dependencies using npm install. Start the Angular development server with ng serve, and then open your browser to http://localhost:4200 to access the application.
 
-1. Set Up the Database
-Open MySQL or any SQL client.
-
-Create a new database:
-CREATE DATABASE tododb;
-
-Import the SQL schema from one of these paths:
-
-todoappserver/src/main/resources/todo-app.sql
-
-database/tododb.sql
-(Contains required tables and sample data)
-
-2. Configure the Backend
-Navigate to the backend folder.
-
-Open: src/main/resources/application.properties
-
-Update database settings:
-
-spring.datasource.url=jdbc:mysql://localhost:3306/tododb
-
-spring.datasource.username=root
-
-spring.datasource.password=9090
-
-Start the Spring Boot application:
-
-Option 1: Run the main class from your IDE
-
-Option 2: In terminal, run mvn spring-boot:run
-
-3. Run the Frontend
-Open a new terminal and navigate to the frontend folder.
-
-Install dependencies: npm install
-
-Start the Angular development server: ng serve
-
-Open your browser and go to: http://localhost:4200
-
-4. Run Unit Tests
-Backend (Spring Boot)
-Open the project in your IDE (IntelliJ, Eclipse, etc.)
-
-Navigate to: src/test/java
-
-Right-click the test class or method → select Run
+For running unit tests, if you are testing the backend (Spring Boot), open the project in your IDE, navigate to src/test/java, right-click the desired test class or method, and select Run.
