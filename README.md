@@ -10,4 +10,4 @@ To run the frontend, open a new terminal window, navigate to the frontend folder
 
 For running unit tests, if you are testing the backend (Spring Boot), open the project in your IDE, navigate to src/test/java, right-click the desired test class or method, and select Run.
 
-<img alt="cc" width="1200px" src="./Untitled design (1).jpg" />
+<img alt="cc" width="1200px" src="./image.png" />
